@@ -1,0 +1,109 @@
+@media(max-width:667px){
+    #ul{
+        margin-left: 100px;
+        padding-bottom: 140px;
+        padding-right: 140px;
+        font-weight: bolder;
+    }
+    #ul li{
+        margin-top: 40px;
+    }
+    .myimg{
+        position: relative;
+    }
+    .myimg img{
+        width: 400px;
+        margin-top: 0px;
+        margin-left: 0px;
+        }
+        .myinf{
+            position: absolute;
+            margin-top: 0px;
+            height: 96%;
+            width: 100%;
+            overflow: hidden;
+            color: aliceblue;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .myinf h1{
+            margin-top: 250px;
+            margin-left: 70px;
+            font-size: 40px !important;
+            font-weight: normal;
+        }
+        .span{
+            background-color: aliceblue;
+            margin-left: 70px !important;
+
+        }
+        .myimg2{
+            display: none;
+        }
+        .first_p{
+            margin-left: 70px;
+            margin-top: 10px;
+        }
+        .d_none{
+            display: none;
+        }
+        .myinf p:first-child{
+                font-family: 'Bebas Neue', sans-serif;
+                font-family: 'Luckiest Guy', cursive;
+                font-family: 'Patrick Hand', cursive;
+                font-size: 25px;
+                margin-left: 70px;
+                margin-top: 10px;
+        }
+        .my_i{
+            display: none;
+        }
+        .my_about{
+            margin-left: 0px;
+            margin-top: 50px;
+        }
+        .names{
+            padding-left: 10px;
+        }
+        .names span{
+            margin-left: 20px;
+        }
+        .bio{
+            margin-top: 20px;
+        }
+        .hr{
+            height: 10px !important;
+            width: 100%;
+        }
+        .resume_btn{
+            height: 43px;
+            width: 180px;
+            color: grey !important;
+            background-color: black;
+            border: 0px;
+            margin-left: 70px;
+        }
+        .project_navbar li{
+            display:inline-block;
+            margin-left: 10px;
+        }
+        .project_navbar{
+            margin-left: -50px;
+        }
+        .add{
+            border: 1px solid grey;
+            /* margin: 0px 40px; */
+        }
+        .names{
+            margin-left: 0px;
+        }
+        .nav-link{
+            margin-left : 20px !important;
+        }
+        .iconss{
+            position: fixed;
+            right: 0;
+            margin-right: 30px;
+            top: 40%;
+            opacity: 0;
+        }
+}

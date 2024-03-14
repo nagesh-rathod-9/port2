@@ -1,0 +1,83 @@
+<%-include('navbar.ejs')%>
+<div class="container-fluid p-5 mb-5" style="border:1px solid black">
+    <form action="/admin/save_about" method="post">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-info">About Detail</h1>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-md-6 mb-3">
+            Discription 1
+            <input type="text" name="disc1" value="<%=about_detail[0].disc_1%>" id="" class="form-control" placeholder="Discription1">
+        </div>
+        <div class="col-md-6 mb-3">
+            Discription 2
+            <input type="text" name="disc2" value="<%=about_detail[0].disc_2%>" id="" class="form-control" placeholder="Discription2">
+        </div>
+        <div class="col">
+            Name
+            <input type="text" name="name" value="<%=about_detail[0].name%>" id="" class="form-control" placeholder="Name">
+        </div>
+        <div class="col">
+            Address
+            <input type="text" name="address" value="<%=about_detail[0].address%>" id="" class="form-control" placeholder="Address">
+        </div>
+        <div class="col">
+            Study
+            <input type="text" name="study" value="<%=about_detail[0].study%>" id="" class="form-control" placeholder="Study">
+        </div>
+        <div class="col">
+            Degree
+            <input type="text" name="degree" value="<%=about_detail[0].degree%>" id="" class="form-control" placeholder="Degree">
+        </div>
+        <div class="col">
+            Mail
+            <input type="text" name="mail" value="<%=about_detail[0].mail%>" id="" class="form-control" placeholder="Mail">
+        </div>
+        <div class="col">
+            Phone
+            <input type="text" name="phone" value="<%=about_detail[0].phone%>" id="" class="form-control" placeholder="Phone">
+        </div>
+        <div class="col-md-12 text-center mt-4">
+            <button class="btn btn-info">Save About Detail</button>
+        </div>
+    </div>
+</form>
+</div>
+<div class="container-fluid p-3" style="border:1px solid black;">
+    <form action="save_service" method="post">
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="text-info">Service</h1>
+    </div>
+    <div class="col-md-12">
+        <input type="text" class="form-control" name="service" required>
+    </div>
+    <div class="col-md-12 mt-3 text-center">
+        <a href="/admin/service_list" class="btn btn-info text-dark">Service List</a>
+        <button class="btn btn-info">
+            Save Service
+        </button>
+    </div>
+</div>
+</form>
+</div>
+
+<div class="container-fluid p-4 mt-5" style="border: 1px solid grey;">
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="text-info">Intrest</h1>
+    </div>
+    <form action="/admin/intrest" method="post">
+    <div class="col-md-12">
+        <input type="text" name="intrest" class="form-control" required>
+    </div>
+    <div class="col-md-12 text-center pt-3">
+        <button class="btn btn-info">Save Intrest</button>
+        <a href="/admin/interst_list" class="btn btn-info">Interest List</a>
+    </div>
+</form>
+</div>
+</div>
+<%-include('footer.ejs')%>

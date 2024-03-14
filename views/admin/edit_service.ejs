@@ -1,0 +1,21 @@
+<%-include('navbar.ejs')%>
+<div class="container-fluid">
+    <form action="update_ser" method="post">
+<div class="row">
+    <div class="col-md-12">
+        <h1>Update Services</h1>
+    </div>
+    <div class="col-md-12">
+        <input type="hidden" name="hidd" value="<%=service_list[0].service_id%>">
+         Services
+        <input type="text" class="form-control" name="service" value="<%=service_list[0].service%>">
+    </div>
+    <div class="col-md-12 mt-3 text-center">
+        <button class="btn btn-info">
+            Update
+        </button>
+    </div>
+</div>
+</form>
+</div>
+<%-include('footer.ejs')%>

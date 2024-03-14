@@ -1,0 +1,270 @@
+*{
+    cursor: pointer;
+}
+.navbar-brand img{
+    width: 150px;
+}
+#ul{
+    margin-left: 800px;
+    position: sticky;
+}
+#ul li{
+    position: relative;
+    padding: 0px 14px !important;
+}
+#ul li .nav-link:hover{
+    background-color: black;
+    color: aliceblue !important;
+}
+#ul li::before{
+position: absolute;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: pink;
+z-index: 99;
+}
+.myimg{
+    position: relative;
+    top: 31px;
+}
+.myimg2 img{
+    width: 400px;
+    /* margin-top: 50px !important; */
+    top: 50px;
+    margin-left: 50px;
+    }
+.myimg2{
+    position: absolute;
+    opacity: 0;
+    top: 50px;
+    left: 0;
+    margin-top: 60px;
+    display: none;
+}
+.myimg2:hover{
+    opacity: 1;
+}
+
+.myimg img{
+width: 400px;
+margin-top: 15px;
+margin-left: 50px;
+filter: saturate(0);
+}
+.myimg img:hover{
+    filter: saturate(1.3);
+}
+
+.myinf h1{
+    font-size: 60px !important;
+    font-weight:bolder;
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Luckiest Guy', cursive;
+    /* font-family: 'Bebas Neue', sans-serif; */
+    margin-top: 190px;
+    position: relative;
+}
+.myinf p:first-child{
+    /* font-family: 'Bebas Neue', sans-serif; */
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 40px;
+    margin-top: 20px;
+}
+.first_p{
+    margin-top: 10px;
+}
+.myinf p{
+    text-align: justify;
+}
+.span{
+    height: 5px;
+    width: 100px;
+    background-color: black;
+}
+.my_i{
+    position: fixed;
+}
+.my_about{
+    margin-left: 500px;
+    margin-top: 100px;
+    
+}
+.home{
+    margin-top: -100px !important;
+}
+.names{
+    padding-left: 100px;
+}
+.names span{
+    margin-left: 20px;
+}
+.about_me{
+    letter-spacing: 3.2px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-family: 'Instrument Serif', serif;
+}
+.bio_1{
+    margin-top: -7px;
+}
+.bio_1 b{
+    color: grey;
+}
+.hr{
+    height: 10px !important;
+    width: 300px;
+}
+.sqr{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 1px solid grey;
+}
+.language li:first-child{
+    margin-left: 0px;
+}
+.language{
+    margin-left: -30px;
+}
+.language li{
+    display: inline-block;
+    margin-left: 10px;
+    justify-content: center;
+}
+
+.language li span{
+    margin-top: 50px;
+    margin-left: 15px;
+}
+.sec{
+    margin-left: -10px;
+    margin-top: -13px;
+}
+.language .sqr2{
+    display: inline-block;
+    margin-left: 40px;
+    justify-content: center;
+}
+.resume_btn{
+    height: 48px;
+    width: 180px;
+    color: grey !important;
+    background-color: black;
+    border: 0px;
+    /* margin-left: 70px; */
+}
+.resume_btn a{
+    color: white;
+    text-decoration: none;
+    height: 48px;
+    width: 180px;
+}
+.resume_btn:hover{
+color: black;
+background-color: transparent;
+border: 1px solid black;
+}
+.resume_btn a:hover{
+    color: black;
+}
+.project_navbar li{
+    display:inline-block;
+    margin-left: 10px;
+}
+.project_navbar li a{
+    padding: 5px 10px;
+
+}
+
+.project_navbar{
+    margin-left: -50px;
+}
+.pro_main_div{
+    position: relative;
+}
+.pro_sub_div{
+    position: absolute;
+    height: 110px;
+    width:340px;
+    /* background-color:  rgba(241, 246, 241,0.5); */
+    background-color: white;
+    z-index: 1;
+    left: 25px;
+    text-align: justify;
+    padding: 5px 10px;
+    opacity: 0;
+    font-size: 12px;
+    bottom: 20px;
+}
+.pro_main_div:hover .pro_sub_div{
+    opacity: 1;
+}
+.pro_main_div img{
+    filter: saturate(0);
+}
+.pro_main_div img:hover{
+    filter: saturate(2);
+}
+.add{
+    border: 1px solid grey;
+    /* margin: 0px 20px; */
+}
+.input_control{
+    width:98%;
+    margin-left: 5px;
+    height: 40px;
+}
+.input_msg{
+    width:98%;
+    margin-left: 5px;
+    height: 100px;
+}
+.submit_btn{
+    height: 50px;
+    width: 190px;
+    border: none;
+    font-weight: bolder;
+    background-color: black;
+    color: white;
+    margin-left: 5px;
+    margin-top: 30px;
+}
+.submit_btn:hover{
+    border: 1px solid grey;
+    background-color: transparent;
+    color: black;
+}
+.names{
+    margin-left: -20px;
+}
+.iconss{
+font-size: 25px;
+position: fixed;
+right: 0;
+margin-right: 40px;
+top: 38%;
+color: black;
+}
+.iconss li{
+    margin-top: 10px;
+}
+
+.iconss li i{
+    color: black;
+    border: 1px solid black;
+    padding: 8px;
+    transition: all 0.8s;
+}
+.iconss li i:hover{
+    border-radius: 50px;
+    color: white;
+    background-color: black;
+}
+.about_me{
+    font-family: 'Josefin Sans', sans-serif;
+}
+.nav-item{
+    text-align: center !important;
+}

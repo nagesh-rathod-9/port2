@@ -1,0 +1,30 @@
+<%-include('navbar.ejs')%>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>SERVICE LIST</h1>
+        </div>
+        <div class="col-md-12 text-center mt-5">
+            <table class="table table-bordered">
+                <tr >
+                    <th>Action</th>
+                    <th>Sn</th>
+                    <th>Service Name</th>
+                </tr>
+                <%for(var i=0;i<service_list.length;i++){%>
+                    <tr>
+                        <td>
+                        <a class="btn btn-warning" href="edit/<%=service_list[i].service_id%>"><i class="fa fa-edit"></i></a>
+                        <a class="btn btn-danger" href="delete/<%=service_list[i].service_id%>"><i class="fa fa-trash"></i></a>
+                    </td>
+                        <td><%=i+1%></td>
+                        <td><%=service_list[i].service%></td>
+                    </tr>
+                <%}%>
+            </table>
+            <a href="/admin/about" ><button class="btn btn-info">Add New Service</button></a>
+
+        </div>
+    </div>
+</div>
+<%-include('footer.ejs')%>

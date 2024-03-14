@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0ca23af288.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="css/Rstyle.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Luckiest+Guy&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Luckiest+Guy&family=Patrick+Hand&display=swap");
+    </style>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap');
+    </style>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Instrument+Serif&display=swap');
+    </style>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+    </style>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+    </style>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: sticky; top: 0;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="image/logo.jpg" alt="" /></a>
+        <button
+          class="navbar-toggler shadow-none border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav" id="ul">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/all">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar -->
+  </body>
+  <section id="home">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4 my_i myimg mt-5">
+          <img src="<%=home_data[0].image1%>" alt="" class="mt-4"/>
+        </div>
+        <div class="col-md-4 my_i myimg2">
+          <img src="image/nagu2.jpg" alt="" />
+        </div>
+        <div class="col-md-7 my_about pb-5">
+          <h3 class="about_me">PROJECTS</h3>
+          <hr>
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span> -->
+              <!-- </button> -->
+                <div class="navbar-nav ">
+                <ul class="project_navbar">
+                 <li> <a class="nav-link active" aria-current="page" href="/all">All</a></li>
+                 <li> <a class="nav-link" href="/frontend">FrontEnd</a></li>
+                 <li> <a class="nav-link bg-black text-white" href="/fullstack">Fullstack</a></li>
+                </ul>
+                </div>
+            </div>
+          </nav>
+          <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div data-aos="fade-up" class="col-md-6 mt-3 pro_main_div">
+                            <a href="http://ec2-54-211-25-128.compute-1.amazonaws.com:1000/" target="_blank">
+                                <img src="image/dentcare1.jpg" alt="" style="height: 270px; width: 370px;">
+                            </a>
+                            <div class="pro_sub_div">
+                                <p>I've successfully developed and hosted a Dentcare website, complete with an admin panel. Leveraging HTML, CSS, JavaScript, Bootstrap, Express, Node.js, and a MySQL database, the website provides an engaging and informative experience in the realm of dental care</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+      </div>
+    </div>
+  </section>
+  <div class="iconss">
+    <ul type="none">
+      <li><a href="<%=social[0].insta_link%>"><i class="icoo fa-brands fa-instagram"></i></li></a>
+      <li><a href="<%=social[0].whatsapp_link%>"><i class="icoo fa-brands fa-whatsapp"></i></li></a>
+      <li><a href="<%=social[0].linkdin_link%>"><i class="icoo fa-brands fa-linkedin"></i></li></a>
+      <li><a href="<%=social[0].github_link%>"><i class="icoo fa-brands fa-github"></i></li></a>
+    </ul>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        duration: 400,
+        offset: 100,
+        easing: 'ease-in',
+        once: false
+    });
+  </script>
+</html>
+

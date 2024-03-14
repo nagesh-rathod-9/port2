@@ -1,0 +1,60 @@
+<%-include('navbar.ejs')%>
+<form action="/admin/home_data" method="post" enctype="multipart/form-data">
+<h1 class="text-primary">Home Details</h1>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            Name
+            <input type="text" class="form-control" name="name" value="<%=data.name%>">
+        </div>
+        <div class="col-md-6">
+            Position
+            <input type="text" class="form-control" name="position" value="<%=data.position%>">
+        </div>
+        <div class="col-md-6">
+            Image 1 b&w
+            <input type="file" class="form-control" name="image1" value="<%=data.image1%>">
+        </div>
+        <!-- <div class="col-md-6">
+            Image 2
+            <input type="file" class="form-control" name="image2" value="<%=data.image2%>">
+        </div> -->
+        <div class="col-md-12 mt-5">
+             
+        <textarea name="discription" id="" class="form-control" rows="5" placeholder="Discription" value="<%=data.discription%>"><%=data.discription%></textarea>
+        </div>
+        <div class="col-md-12 text-center pt-4">
+            <button class="btn btn-info">Save</button>
+        </div>
+    </div>
+</div>
+</form>
+<legend>
+<form action="/admin/social_link" method="post">
+    <div class="col-md-12 text-primary mt-5">
+        <h1>Social Link</h1>
+    </div>
+    <div class="row">
+    <div class="col-md-3">
+        Instgram Link
+        <input type="url" name="insta" placeholder="Instgram" class="form-control" value="<%=social.insta_link%>"> 
+    </div>
+    <div class="col-md-3">
+        whatsapp Link
+        <input type="url" name="whatsapp" placeholder="whatsapp" class="form-control" value="<%=social.whatsapp_link%>"> 
+    </div>
+    <div class="col-md-3">
+        Linkdin Link
+        <input type="url" name="linkdin" placeholder="Linkdin" class="form-control" value="<%=social.linkdin_link%>"> 
+    </div>
+    <div class="col-md-3">
+        GitHub Link
+        <input type="url" name="github" placeholder="Github" class="form-control" value="<%=social.github_link%>"> 
+    </div>
+    <div class="col-md-12 text-center mt-2 mb-5">
+        <button class="btn btn-info">Save</button>
+    </div>
+</div>
+</form>
+</legend>
+<%-include('footer.ejs')%>
