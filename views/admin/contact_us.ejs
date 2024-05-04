@@ -1,0 +1,37 @@
+<%-include('navbar')%>
+<div class="container-fluid">
+  <form action="/admin/save_basic_info" method="post">
+    <div class="row p-5" style="border: 1px solid black;">
+        <div class="col-md-12">
+            <h3 class="text-dark">Enter Basic Information</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    Enter Address
+                    <input type="text" name="address" id="" class="form-control" value="<%=basic_info[0].address%>">
+                </div>
+                <div class="col-md-12">
+                    Enter Email
+                    <input type="text" name="email" id="" class="form-control" value="<%=basic_info[0].email%>">
+                </div>
+                <div class="col-md-12">
+                    Enter Mobile
+                    <input type="text" name="mobile" id="" class="form-control" value="<%=basic_info[0].mobile%>">
+                </div>
+                <div class="col-md-12">
+                    Enter Map Link
+                    <input type="text" name="map" id="" class="form-control" value="<%=basic_info[0].map%>">
+                </div>
+                <div class="col-md-12 mt-3">
+                    <button class="btn btn-dark w-100">Save Information</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+            <iframe src="<%=basic_info[0].map%>" width="450" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+  </form>
+</div>
+<%-include('footer')%>

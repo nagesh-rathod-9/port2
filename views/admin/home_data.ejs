@@ -1,60 +1,88 @@
 <%-include('navbar.ejs')%>
-<form action="/admin/home_data" method="post" enctype="multipart/form-data">
-<h1 class="text-primary">Home Details</h1>
-<div class="container-fluid mt-5">
-    <div class="row">
-        <div class="col-md-6">
-            Name
-            <input type="text" class="form-control" name="name" value="<%=data.name%>">
+
+<form action="/admin/home_data" method="post" enctype="multipart/form-data" class="border-1 p-5" style="border: 1px solid black;">
+    <h1 class="text-dark">Home Details</h1>
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="col-md-12 mt-3">
+                    Name
+                    <input type="text" class="form-control" name="name" value="<%=data.name%>">
+                </div>
+                <div class="col-md-12 mt-3">
+                    Position
+                    <input type="text" class="form-control" name="position" value="<%=data.position%>">
+                </div>
+                <div class="col-md-12 mt-3">
+                    Image 1 b&w
+                    <input type="file" class="form-control" name="image1" value="<%=data.image1%>">
+                </div>
+                <div class="col-md-12 mt-3 mt-4">
+                    <textarea name="discription" id="" class="form-control" rows="5" placeholder="Discription" value="<%=data.discription%>"><%=data.discription%></textarea>
+                </div>
+                    <div class="col-md-12 mt text-center pt-4">
+                        <button class="btn btn-dark w-100">Save</button>
+                    </div>
+            </div>
+            <div class="col-md-6 mt-5">
+                <div class="col-md-7">
+                    <img src="/<%=data.image1%>" alt="" class="w-100">
+                </div>
+            </div>
         </div>
-        <div class="col-md-6">
-            Position
-            <input type="text" class="form-control" name="position" value="<%=data.position%>">
-        </div>
-        <div class="col-md-6">
-            Image 1 b&w
-            <input type="file" class="form-control" name="image1" value="<%=data.image1%>">
-        </div>
-        <!-- <div class="col-md-6">
-            Image 2
-            <input type="file" class="form-control" name="image2" value="<%=data.image2%>">
+    </div>
+    </form>
+
+    <legend style="border: 1px solid grey;" class="p-md-5 mt-5 col-md-12">
+        <form action="/admin/social_link" method="post">
+            <div class="row">
+                <div class="col-md-12 text-dark" >
+                    <h1>Social Link</h1>
+                </div>
+                <div class="col-md-6 mt-4">
+                    Instgram Link
+                    <input type="url" name="insta" placeholder="Instgram" class="form-control" value="<%=social.insta_link%>"> 
+                </div>
+                <div class="col-md-6 mt-4">
+                    whatsapp Link
+                    <input type="url" name="whatsapp" placeholder="whatsapp" class="form-control" value="<%=social.whatsapp_link%>"> 
+                </div>
+                <div class="col-md-6 mt-4">
+                    Linkdin Link
+                    <input type="url" name="linkdin" placeholder="Linkdin" class="form-control" value="<%=social.linkdin_link%>"> 
+                </div>
+                <div class="col-md-6 mt-4">
+                    GitHub Link
+                    <input type="url" name="github" placeholder="Github" class="form-control" value="<%=social.github_link%>"> 
+                </div>
+                <div class="col-md-12 text-center mb-5 mt-4">
+                    <button class="btn btn-dark w-100">Save Social Link</button>
+                </div>
+            </div>
+            <!-- <div class="col-md-12 text-dark mt-5" >
+                <h1>Social Link</h1>
+            </div>
+            <div class="row">
+            <div class="col">
+                Instgram Link
+                <input type="url" name="insta" placeholder="Instgram" class="form-control" value="<%=social.insta_link%>"> 
+            </div>
+            <div class="col">
+                whatsapp Link
+                <input type="url" name="whatsapp" placeholder="whatsapp" class="form-control" value="<%=social.whatsapp_link%>"> 
+            </div>
+            <div class="col">
+                Linkdin Link
+                <input type="url" name="linkdin" placeholder="Linkdin" class="form-control" value="<%=social.linkdin_link%>"> 
+            </div>
+            <div class="col-md-3">
+                GitHub Link
+                <input type="url" name="github" placeholder="Github" class="form-control" value="<%=social.github_link%>"> 
+            </div>
+            <div class="col-md-1 text-center mb-5 mt-4">
+                <button class="btn btn-dark">Save</button>
+            </div>
         </div> -->
-        <div class="col-md-12 mt-5">
-             
-        <textarea name="discription" id="" class="form-control" rows="5" placeholder="Discription" value="<%=data.discription%>"><%=data.discription%></textarea>
-        </div>
-        <div class="col-md-12 text-center pt-4">
-            <button class="btn btn-info">Save</button>
-        </div>
-    </div>
-</div>
-</form>
-<legend>
-<form action="/admin/social_link" method="post">
-    <div class="col-md-12 text-primary mt-5">
-        <h1>Social Link</h1>
-    </div>
-    <div class="row">
-    <div class="col-md-3">
-        Instgram Link
-        <input type="url" name="insta" placeholder="Instgram" class="form-control" value="<%=social.insta_link%>"> 
-    </div>
-    <div class="col-md-3">
-        whatsapp Link
-        <input type="url" name="whatsapp" placeholder="whatsapp" class="form-control" value="<%=social.whatsapp_link%>"> 
-    </div>
-    <div class="col-md-3">
-        Linkdin Link
-        <input type="url" name="linkdin" placeholder="Linkdin" class="form-control" value="<%=social.linkdin_link%>"> 
-    </div>
-    <div class="col-md-3">
-        GitHub Link
-        <input type="url" name="github" placeholder="Github" class="form-control" value="<%=social.github_link%>"> 
-    </div>
-    <div class="col-md-12 text-center mt-2 mb-5">
-        <button class="btn btn-info">Save</button>
-    </div>
-</div>
-</form>
-</legend>
+        </form>
+        </legend>
 <%-include('footer.ejs')%>

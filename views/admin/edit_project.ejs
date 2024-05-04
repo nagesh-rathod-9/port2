@@ -1,0 +1,44 @@
+<%-include('navbar')%>
+<div class="container-fluid">
+    <form action="/admin/edit_project" method="post" enctype="multipart/form-data">
+        <div class="row">
+           <div class="col-md-12">
+               <h3 class="text-dark">Enter Project Detail</h3>
+           </div>
+           <div class="col-md-6 mt-5">
+               <div class="col-md-12 mt-2">
+                   Select Project Image
+                   <input type="hidden" name="project_id" class="form-control" value="<%=project[0].project_id%>">
+                   <input type="file" name="img" class="form-control">
+               </div>
+               <div class="col-md-12 mt-2">
+                   Enter Project Link
+                   <input type="text" name="link" class="form-control" value="<%=project[0].project_link%>">
+               </div>
+               <div class="col-md-12 mt-2">
+                   Enter Project Heading
+                   <input type="text" name="heading" class="form-control" value="<%=project[0].project_heading%>">
+               </div>
+               <div class="col-md-12 mt-2">
+                   Enter Discription
+                   <input type="text" name="disc" class="form-control" value="<%=project[0].project_disc%>">
+               </div>
+               <div class="col-md-12 mt-2">
+                   Enter Which Type
+                   <input type="text" name="type" class="form-control" value="<%=project[0].project_type%>">
+               </div>
+               <div class="col-md-12 mt-2">
+                   Enter Date Of Project
+                   <input type="text" name="date" class="form-control" value="<%=project[0].project_date%>">
+               </div>
+               <div class="col-md-12 mt-2">
+                   <button class="btn btn-dark w-100">Save Info</button>
+               </div>
+           </div>
+           <div class="col-md-6 mt-5">
+            <img src="/uploads/<%=project[0].img%>" alt="" class="w-100 mt-4">
+           </div>
+        </div>
+     </form>
+</div>
+<%-include('footer')%>

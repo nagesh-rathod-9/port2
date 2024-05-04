@@ -46,7 +46,7 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: sticky; top: 0; z-index: 999;">
+    <nav class="navbar navbar-expand-lg" style="position: sticky; top: 0; z-index: 999; background-color: #dadada;">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src="image/logo.jpg" alt="" /></a>
         <button
@@ -112,40 +112,24 @@
           <h3 class="about_me">SERVICES</h3>
           <hr class="hr">
           <%for(var i=0;i<service.length;i++){%>
-            <p><i class="fa-solid fa-play me-4"></i><%=service[i].service%></p>
+            <p><i class="fa-solid fa-clone me-3"></i><%=service[i].service%></p>
           <%}%>
         </div>
         <div class="col-md-6 mt-3" data-aos="fade-up">
           <h3 class="about_me">INTERESTS</h3>
           <hr class="hr">
-          <p><i class="fa-solid fa-play me-4"></i>Gaming</p>
-          <p><i class="fa-solid fa-play me-4"></i>Music</p>
-          <p><i class="fa-solid fa-play me-4"></i>Swiming</p>
+          <%for(var i=0;i<interest.length;i++){%>
+          <p><i class="fa-solid fa-clone me-3"></i><%=interest[i].interest%></p>
+          <%}%>       
         </div>
-        <div class="col-md-6 mt-5" data-aos="fade-up">
-          <h3 class="about_me">PROGRAMMING</h3>
+        <div class="col-md-6 mt-5 justify-content-center" data-aos="fade-up">
+          <h3 class="about_me justify-content-center">PROGRAMMING</h3>
           <hr class="hr">
-          <div class="progress w-100 mt-4 rounded-0" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar bg-secondary" style="width: 92%">BOOTSTRAP</div>
-          </div>
-          <div class="progress w-100 mt-3 rounded-0" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar bg-secondary" style="width: 86%">JAVASCRIPT</div>
-          </div>
-          <div class="progress w-100 mt-3 rounded-0" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar bg-secondary" style="width: 89%">JQUERY</div>
-          </div>
-          <div class="progress w-100 mt-3 rounded-0" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar bg-secondary" style="width: 79%">REACT JS</div>
-          </div>
-          <div class="progress w-100 mt-3 rounded-0" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar bg-secondary" style="width: 75%">NODE JS</div>
-          </div>
-          <div class="progress w-100 mt-3 rounded-0" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar bg-secondary" style="width: 90%">MYSQL</div>
-          </div>
-          <div class="progress w-100 mt-3 rounded-0" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar bg-secondary" style="width: 80%">MONGO DB</div>
-          </div>
+          <%for(var i=0;i<programming.length;i++){%>
+            <div class="progress w-100 mt-3 rounded-0" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar bg-secondary" style="width:<%=programming[i].percentage%>%"><%=programming[i].t_name%></div>
+            </div>
+            <%}%>
         </div>
         <div class="col-md-6 mt-5" data-aos="fade-up">
           <h3 class="about_me">LANGUAGE</h3>

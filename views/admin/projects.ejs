@@ -1,0 +1,74 @@
+<%-include('navbar')%>
+<div class="container-fluid">
+    <form action="/admin/save_project" method="post" enctype="multipart/form-data">
+     <div class="row">
+        
+        <div class="col-md-10 mt-5 p-5">
+            <div class="col-md-12">
+                <h3 class="text-dark">Enter Project Detail</h3>
+            </div>
+            <div class="col-md-12 mt-2">
+                Select Project Image
+                <input type="file" name="img" class="form-control">
+            </div>
+            <div class="col-md-12 mt-2">
+                Enter Project Link
+                <input type="text" name="link" class="form-control">
+            </div>
+            <div class="col-md-12 mt-2">
+                Enter Project Heading
+                <input type="text" name="heading" class="form-control">
+            </div>
+            <div class="col-md-12 mt-2">
+                Enter Discription
+                <input type="text" name="disc" class="form-control">
+            </div>
+            <div class="col-md-12 mt-2">
+                Enter Which Type
+                <input type="text" name="type" class="form-control">
+            </div>
+            <div class="col-md-12 mt-2">
+                Enter Date Of Project
+                <input type="text" name="date" class="form-control">
+            </div>
+            <div class="col-md-12 mt-2">
+                <button class="btn btn-dark w-100">Save Info</button>
+            </div>
+        </div>
+     </div>
+  </form>
+
+  <div class="row mt-5">
+    <table class="table table-hover"  style="font-size: 13px;">
+        <tr>
+            <th>Sn</th>
+            <th>Img</th>
+            <th>Link</th>
+            <th>Heading</th>
+           
+            <th>Type</th>
+            <th>Date</th>
+            <th>Action</th>
+        </tr>
+        <%for(var i=0;i<project.length;i++){%>
+            <tr>
+                <td><%=i+1%></td>
+                <td>
+                    <img src="/uploads/<%=project[i].img%>" alt="" style="width: 70px;">
+                </td>
+                <td><%=project[i].project_link%></td>
+                <td><%=project[i].project_heading%></td>
+               
+                <td><%=project[i].project_type%></td>
+                <td><%=project[i].project_date%></td>
+                <td width="100px">
+                    <a href="/admin/edit_project/<%=project[i].project_id%>"><button class="btn btn-dark"><i class="fa fa-edit"></i></button></a>
+                    <a href="/admin/delete_project/<%=project[i].project_id%>"><button class="btn btn-dark" onclick="return confirm('Are You Sure')"><i class="fa fa-trash"></i></button></a>
+                </td>
+            </tr>
+        <%}%>
+    </table>
+  </div>
+</div>
+
+<%-include('footer')%>

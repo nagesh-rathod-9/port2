@@ -1,0 +1,18 @@
+<%-include('navbar')%>
+    <div class="container-fluid">
+        <form action="/admin/edit_int" method="post">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="text-dark">Add Intrest</h3>
+                </div>
+                <div class="col-md-8">
+                    <input type="hidden" name="intrest_id" class="form-control" value="<%=interest[0].interest_id%>">
+                    <input type="text" name="intrest" class="form-control" required value="<%=interest[0].interest%>">
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-dark w-100">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <%-include('footer')%>

@@ -1,0 +1,22 @@
+<%-include('navbar')%>
+<div class="container-fluid">
+    <form action="/admin/edit_programming" method="post">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-dark">Add Programming Language</h3>
+            </div>
+            <div class="col-md-4">
+                <input type="hidden" name="p_id" class="form-control" placeholder="Enter Technology Name" value="<%=programming[0].p_id%>">
+                <input type="text" name="t_name" class="form-control" placeholder="Enter Technology Name" value="<%=programming[0].t_name%>">
+            </div>
+            <div class="col-md-4">
+                <input type="text" name="percentage" class="form-control" placeholder="Enter Parcentage %" value="<%=programming[0].percentage%>">
+            </div>
+            <div class="col-md-4">
+                <!-- <input type="text" name="percentage" class="form-control"> -->
+                <button class="btn btn-dark w-100">Save Language</button>
+            </div>
+        </div>
+    </form>
+</div>
+<%-include('footer')%>

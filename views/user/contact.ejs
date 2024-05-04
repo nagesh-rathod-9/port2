@@ -43,7 +43,7 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: sticky; top: 0; z-index: 999;">
+    <nav class="navbar navbar-expand-lg" style="position: sticky; top: 0; z-index: 999;background-color: #dadada;">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src="image/logo.jpg" alt="" /></a>
         <button
@@ -89,40 +89,43 @@
           <img src="image/nagu2.jpg" alt="" />
         </div>
 
-        <div class="col-md-7 my_about pb-5" data-aos="fade-up">
+        <div class="col-md-7 my_about pb-3" data-aos="fade-up">
             <h3 class="about_me">GET IN TOUCH</h3>
           <hr>
           <div class="row ps-3 pe-3">
             <div class="mt-2 me-3 col-md-4 text-center add pt-2 pb-1">
                 <span><i class="fa-solid fa-location-dot"></i></span><br>
-                <p>Newargaon,Gangapur,Sambhajinagar</p>
+                <p><%=basic_info[0].address%></p>
             </div>
             <div class="mt-2 me-3 col-md-3 text-center add pt-2 pb-1">
                 <span><i class="fa-solid fa-envelope"></i></span><br>
-                <p>nagesh13212@gmail.com</p>
+                <p><%=basic_info[0].email%></p>
             </div>
             <div class="mt-2 me-3 col-md-4 text-center add pt-2 pb-1">
                 <span><i class="fa-solid fa-phone-volume"></i></span><br>
-                <p>+91 7666969836</p>
+                <p>+91 <%=basic_info[0].mobile%></p>
             </div>
           </div>
       <div class="row mt-5">
-        <div class="col-md-6 mt-5">
-            <form action="">
+        <div class="col-md-6 mt-2">
+            <form action="/save_contact_form" method="post">
                 <div class="col-md-12">
-                    <input type="text" class="input_control ps-2" placeholder="Name">
+                    <input type="text" class="input_control ps-2" name="Name"  placeholder="Name">
                 </div>
                 <div class="col-md-12 mt-4">
-                    <input type="text" class="input_control ps-2" placeholder="Email">
+                    <input type="text" class="input_control ps-2" name="Email" placeholder="Email">
                 </div>
                 <div class="col-md-12 mt-4">
-                    <input type="text" class="input_msg ps-2" placeholder="Message">
+                  <input type="text" class="input_control ps-2" name="subject" placeholder="subject">
+              </div>
+                <div class="col-md-12 mt-4">
+                    <input type="text" class="input_msg ps-2" name="Message"  placeholder="Message">
                 </div>
                 <button class="submit_btn">SEND MESSAGE</button>
             </form>
         </div>
-        <div class="col-md-6 mt-5">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7190.326918484053!2d74.89141694108163!3d19.6879603282639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdc7e1f43abb379%3A0xb4486dfd2e58b41a!2sNevargaon%2C%20Maharashtra%20431109!5e1!3m2!1sen!2sin!4v1705842242164!5m2!1sen!2sin" width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="col-md-6 mt-2">
+            <iframe src="<%=basic_info[0].map%>" width="350" height="370" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
 

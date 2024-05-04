@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/Rstyle.css" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
-      </style>
+    </style>
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
     </style>
@@ -33,12 +33,12 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
-      </style>
+    </style>
 </head>
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: sticky; top: 0; z-index: 999;">
+    <nav class="navbar navbar-expand-lg" style="position: sticky; top: 0; z-index: 999; background-color: #dadada;">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="image/logo.jpg" alt="" /></a>
             <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse"
@@ -52,10 +52,11 @@
                         <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about" >About</a>
+                        <a class="nav-link" href="/about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/all" style="background-color: black !important; color: white !important;">Portfolio</a>
+                        <a class="nav-link" href="/all"
+                            style="background-color: black !important; color: white !important;">Portfolio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/contact">Contact</a>
@@ -78,65 +79,29 @@
             <div class="col-md-7 my_about pb-5">
                 <h3 class="about_me">PROJECTS</h3>
                 <hr>
-                <nav class="navbar navbar-expand-lg">
-                    <div class="container-fluid">
-                        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span> -->
-                        <!-- </button> -->
-                        <div class="navbar-nav ">
-                            <ul class="project_navbar">
-                                <li> <a class="nav-link bg-black text-white" aria-current="page" href="/all">All</a>
-                                </li>
-                                <li> <a class="nav-link" href="/frontend">FrontEnd</a></li>
-                                <li> <a class="nav-link" href="/fullstack">Fullsatck</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="row">
-                                <div data-aos="fade-up" class="col-md-6 mt-3 pro_main_div">
-                                    <a href="https://nagesh-rathod-9.github.io/nagebaba/" target="_blank">
-                                        <img src="image/bank1.jpg" alt="" style="height: 270px; width: 370px;">
-                                    </a>
-                                    <div class="pro_sub_div">
-                                        <p>I've designed a website inspired by Sant Nagebaba using HTML, CSS, and JavaScript. It's hosted on GitHub, allowing easy access and sharing.</p>
+                                <%for(var i=0;i<project.length;i++){%>
+                                
+                                <div class="col-md-5 mt-5">
+                                    <div class="card project_cards">
+                                        <div class="card-header p-0" style="border-bottom: none;">
+                                            <a href="<%=project[i].project_link%>">
+                                            <img src="/uploads/<%=project[i].img%>" alt=""
+                                                class="w-100" style="height: 30vh;"></a>
+                                        </div>
+                                        <div class="card-body border-0"
+                                            style="font-family: 'Times New Roman', Times, serif;height: 30vh;">
+                                            <h5><%=project[i].project_heading%></h5>
+                                            <div><%=project[i].project_disc%></div>
+                                            <span style=""><u><%=project[i].project_type%></u></span>/ <span><%=project[i].project_date%></span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div data-aos="fade-up" class="col-md-6 mt-3 pro_main_div">
-                                    <a href="https://nagesh-rathod-9.github.io/ceremany/" target="_blank">
-                                        <img src="image/cofee1.jpg" alt="" style="height: 280px; width: 380px;">
-                                    </a>
-                                    <div class="pro_sub_div">
-                                        <p>Utilizing HTML, CSS, and JavaScript, I've crafted a website inspired by Ceremony Coffee. Please note that it's optimized for larger screens, so for the best experience, I recommend opening it on a PC or desktop. The site is conveniently hosted on GitHub for easy access and sharing.</p>
-                                    </div>
-                                </div>
-                                <div data-aos="fade-up" class="col-md-6 mt-3 pro_main_div">
-                                    <a href="https://nagesh-rathod-9.github.io/gloxy/" target="_blank">
-                                        <img src="image/glo2.jpg" alt="" style="height: 270px; width: 370px;">
-                                    </a>
-                                    <div class="pro_sub_div">
-                                        <p>I've designed the Gloxy website using HTML, CSS, and JavaScript. Please be aware that the site is currently optimized for larger screens, such as PCs or laptops. For the best experience, I recommend opening it on a device with a larger display.</p>
-                                    </div>
-                                </div>
-                                <div data-aos="fade-up" class="col-md-6 mt-3 pro_main_div">
-                                    <a href="https://nagesh-rathod-9.github.io/fiverr/" target="_blank">
-                                        <img src="image/fiver1.jpg" alt="" style="height: 270px; width: 370px;">
-                                    </a>
-                                    <div class="pro_sub_div">
-                                        <p>I've designed the home page of the Fiver website using HTML, CSS, and JavaScript. Please note that the current version is optimized for larger screens, such as PCs or laptops. For the optimal viewing experience, I recommend opening it on a device with a larger display.</p>
-                                    </div>
-                                </div>
-                                <div data-aos="fade-up" class="col-md-6 mt-3 pro_main_div">
-                                    <a href="http://ec2-54-211-25-128.compute-1.amazonaws.com:1000/" target="_blank">
-                                        <img src="image/dentcare1.jpg" alt="" style="height: 270px; width: 370px;">
-                                    </a>
-                                    <div class="pro_sub_div">
-                                        <p>I've successfully developed and hosted a Dentcare website, complete with an admin panel. Leveraging HTML, CSS, JavaScript, Bootstrap, Express, Node.js, and a MySQL database, the website provides an engaging and informative experience in the realm of dental care</p>
-                                    </div>
-                                </div>
+                            <%}%>
                             </div>
                         </div>
                     </div>
@@ -148,21 +113,21 @@
 </section>
 <div class="iconss">
     <ul type="none">
-      <li><a href="<%=social[0].insta_link%>"><i class="icoo fa-brands fa-instagram"></i></li></a>
-      <li><a href="<%=social[0].whatsapp_link%>"><i class="icoo fa-brands fa-whatsapp"></i></li></a>
-      <li><a href="<%=social[0].linkdin_link%>"><i class="icoo fa-brands fa-linkedin"></i></li></a>
-      <li><a href="<%=social[0].github_link%>"><i class="icoo fa-brands fa-github"></i></li></a>
+        <li><a href="<%=social[0].insta_link%>"><i class="icoo fa-brands fa-instagram"></i></li></a>
+        <li><a href="<%=social[0].whatsapp_link%>"><i class="icoo fa-brands fa-whatsapp"></i></li></a>
+        <li><a href="<%=social[0].linkdin_link%>"><i class="icoo fa-brands fa-linkedin"></i></li></a>
+        <li><a href="<%=social[0].github_link%>"><i class="icoo fa-brands fa-github"></i></li></a>
     </ul>
-  
-  </div>
+
+</div>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-  AOS.init({
-      duration: 400,
-      offset: 200,
-      easing: 'ease-in',
-      once: false
-  });
+    AOS.init({
+        duration: 400,
+        offset: 200,
+        easing: 'ease-in',
+        once: false
+    });
 </script>
 
 </html>
